@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
 import { render, screen, fireEvent } from "@testing-library/react";
-import App from "../components/App";
+import App from "../components/App"; // Import your App component, not 'React' or 'useState'.
 
 test("displays in 'light' mode when initialized", () => {
   const { container } = render(<App />);
@@ -28,3 +28,5 @@ test("changes back to 'light' mode when the button is clicked twice", () => {
 
   expect(container.querySelector(".App.light")).toBeInTheDocument();
 });
+
+
